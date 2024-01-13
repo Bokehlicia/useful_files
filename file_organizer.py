@@ -22,7 +22,7 @@ def organize_files_by_type():
     # Define file extensions for each category
     image_extensions = [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff", ".tif", ".svg"]
     video_extensions = [".mp4", ".avi", ".mkv", ".mov", ".wmv"]
-    document_extensions = [".pdf", ".docx", ".doc", ".xlsx", ".xls", ".pptx", ".ppt", ".txt"]
+    document_extensions = [".pdf", ".docx", ".doc", ".xlsx", ".xls", ".pptx", ".ppt", ".txt", ".zip"]
     music_extensions = [".mp3", ".wav", ".flac", ".aac", ".ogg"]
     program_extensions = [".exe", ".msi", ".app", ".deb"]
     font_extensions = [".ttf", ".otf", ".woff", ".woff2", ".eot", ".pfb", ".pfm", ".svg", ".bdf", ".pcf", ".afm", ".crf"]
