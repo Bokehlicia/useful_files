@@ -74,7 +74,42 @@ q:before, q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-}
+}"""
+
+# Mixin-font
+mixin_content = """// Mixin-font
+@mixin heading-style($size) {
+  font-family: $font-family-heading;
+  font-size: $size;
+  line-height: $line-height-heading;
+  color: $color-heading;
+  margin: 0 0 0.5em;
+}"""
+
+# Variable-font
+variable_content = """// Text Variables
+$font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-heading: "Georgia", serif;
+
+$font-size-base: 16px;
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.25rem;
+$font-size-h6: 1rem;
+
+$line-height-base: 1.6;
+$line-height-heading: 1.3;
+
+$color-base: #333;
+$color-heading: #000;"""
+
+# Content inside the main.scss file
+scss_content = """@import "./base/mixin.scss";
+@import "./base/placeholder.scss";
+@import "./base/reset.scss";
+@import "./base/variable.scss";
 
 // Base Styles
 body {
@@ -116,41 +151,6 @@ p {
   margin: 0 0 1em;
   font-size: $font-size-base;
 }"""
-
-# Mixin-font
-mixin_content = """// Mixin-font
-@mixin heading-style($size) {
-  font-family: $font-family-heading;
-  font-size: $size;
-  line-height: $line-height-heading;
-  color: $color-heading;
-  margin: 0 0 0.5em;
-}"""
-
-# Variable-font
-variable_content = """// Text Variables
-$font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-heading: "Georgia", serif;
-
-$font-size-base: 16px;
-$font-size-h1: 2.5rem;
-$font-size-h2: 2rem;
-$font-size-h3: 1.75rem;
-$font-size-h4: 1.5rem;
-$font-size-h5: 1.25rem;
-$font-size-h6: 1rem;
-
-$line-height-base: 1.6;
-$line-height-heading: 1.3;
-
-$color-base: #333;
-$color-heading: #000;"""
-
-# Content inside the main.scss file
-scss_content = """@import "./base/mixin.scss";
-@import "./base/placeholder.scss";
-@import "./base/reset.scss";
-@import "./base/variable.scss";"""
 
 def create_web_dev_structure(project_name):
     # Define the project structure
