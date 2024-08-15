@@ -10,7 +10,7 @@ html_content = """<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type=“text/css” href="styles.css">
     <title>Document</title>
 </head>
 <body>
@@ -76,6 +76,33 @@ table {
     border-spacing: 0;
 }"""
 
+mixin_content = """// Mixin-font
+@mixin heading-style($size) {
+  font-family: $font-family-heading;
+  font-size: $size;
+  line-height: $line-height-heading;
+  color: $color-heading;
+  margin: 0 0 0.5em;
+}"""
+
+variable_content = """// Text Variables
+$font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-heading: "Georgia", serif;
+
+$font-size-base: 16px;
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.25rem;
+$font-size-h6: 1rem;
+
+$line-height-base: 1.6;
+$line-height-heading: 1.3;
+
+$color-base: #333;
+$color-heading: #000;"""
+
 # Content inside the main.scss file
 scss_content = """@import "./base/mixin.scss";
 @import "./base/placeholder.scss";
@@ -91,10 +118,10 @@ def create_web_dev_structure(project_name):
         'scss': {
             'main.scss': scss_content,
             'base': {                
-                '_mixin.scss': '',
+                '_mixin.scss': mixin_content,
                 '_placeholder.scss': '',
                 '_reset.scss': reset_content,
-                '_variable.scss': ''
+                '_variable.scss': variable_content
             }
         },
         'js': {
