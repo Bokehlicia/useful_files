@@ -74,6 +74,47 @@ q:before, q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+// Base Styles
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-base;
+  margin: 0;
+  padding: 0;
+}
+
+// Headings
+h1 {
+  @include heading-style($font-size-h1);
+}
+
+h2 {
+  @include heading-style($font-size-h2);
+}
+
+h3 {
+  @include heading-style($font-size-h3);
+}
+
+h4 {
+  @include heading-style($font-size-h4);
+}
+
+h5 {
+  @include heading-style($font-size-h5);
+}
+
+h6 {
+  @include heading-style($font-size-h6);
+}
+
+// Paragraphs
+p {
+  margin: 0 0 1em;
+  font-size: $font-size-base;
 }"""
 
 # Mixin-font
