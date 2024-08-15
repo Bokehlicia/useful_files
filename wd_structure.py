@@ -76,6 +76,7 @@ table {
     border-spacing: 0;
 }"""
 
+# Mixin-font
 mixin_content = """// Mixin-font
 @mixin heading-style($size) {
   font-family: $font-family-heading;
@@ -85,6 +86,7 @@ mixin_content = """// Mixin-font
   margin: 0 0 0.5em;
 }"""
 
+# Variable-font
 variable_content = """// Text Variables
 $font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-heading: "Georgia", serif;
