@@ -6,16 +6,15 @@ ignore_content = """/scss"""
 # Content inside the index.html file
 html_content = """<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type=“text/css” href="styles.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  
+  </body>
 </html>"""
 
 # Reset all
@@ -200,5 +199,5 @@ def create_folders_and_files(structure, current_path):
                 file.write(content)
 
 # Example usage:
-project_name = 'my_web_project'
+project_name = "fast-test"
 create_web_dev_structure(project_name)
